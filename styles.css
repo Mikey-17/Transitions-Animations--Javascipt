@@ -1,0 +1,64 @@
+/* Part 1: CSS3 Transitions and Animations */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animated box */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #ff6f61;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: transform 1s ease, background-color 0.5s;
+}
+
+/* When JavaScript adds this class */
+.animate {
+  transform: rotate(360deg) scale(1.3);
+}
+
+/* Color toggle */
+.toggleColor {
+  background-color: #4caf50;
+}
+
+/* Keyframe fade-in for heading */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  margin-top: 20px;
+  font-weight: bold;
+}
